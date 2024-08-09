@@ -1,0 +1,164 @@
+<!-- Day 9: DOM Manipulation -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM (Document Object Model)</title>
+  </head>
+  <body style="background-color: #212121; color: #fff">
+    <h1>DOM work space</h1>
+  </body>
+  <script>
+    // Day 9: DOM Manipulation
+    // Tasks/Activities:
+    // Activity 1: Selecting and Manipulating Elements
+    // • Task 1: Select an HTML element by its ID and change its text content.
+
+    //  <p id="myParagraph">Click on the button for update the text.</p>
+    //  <button style="cursor: pointer" id="button_text">Change Text</button>
+    // document
+    //   .querySelector("#button_text")
+    //   .addEventListener("click", function () {
+    //     document.querySelector("#myParagraph").textContent =
+    //       "Text is changed now.Thank you surinder.";
+    //   });
+
+    // • Task 2: Select an HTML element by its class and change its background color.
+
+    // <p class="myParagraph" style="background-color: red">
+    //       Click on the button for update the text.
+    //     </p>
+    //     <button style="cursor: pointer" id="button_text">
+    //       click me to change Paragraph background color
+    //     </button>
+    // document
+    //   .querySelector("#button_text")
+    //   .addEventListener("click", function () {
+    //     document.querySelector(".myParagraph").style.backgroundColor = "blue";
+    //   });
+
+    // Activity 2: Creating and Appending Elements
+    // • Task 3: Create a new div element with some text content and append it to the body.
+    // const newDiv = document.createElement("div");
+    // newDiv.textContent = "This is a new div element.";
+    // document.body.appendChild(newDiv);
+
+    // • Task 4: Create a new li element and add it to an existing ul list.
+    //  <ul id="unorderlist">
+    //   <li>First</li>
+    //   <li>Second</li>
+    //   <li>Third</li>
+    // </ul>
+    // const newListItem = document.createElement("li");
+    // newListItem.textContent = "Fourth";
+    // const ulList = document.getElementById("unorderlist");
+    // ulList.appendChild(newListItem);
+
+    // Activity 3: Removing Elements
+    // • Task 5: Select an HTML element and remove it from the DOM.
+    // <div id="container">
+    //     <p id="paragraph">This is a paragraph that will be removed.</p>
+    //     <button id="removeBtn">Remove Paragraph</button>
+    // </div>
+    // const removeBtn = document.getElementById("removeBtn");
+    // const paragraph = document.getElementById("paragraph");
+    // removeBtn.addEventListener("click", function () {
+    //   paragraph.remove();
+    // });
+
+    // • Task 6: Remove the last child of a specific HTML element.
+    //  <ul id="unorderlist">
+    //   <li>First</li>
+    //   <li>Second</li>
+    //   <li>Third</li>
+    // </ul>
+    // const unorderlist = document.getElementById("unorderlist");
+    // unorderlist.removeChild(unorderlist.lastElementChild);
+
+    // Activity 4: Modifying Attributes and Classes
+    // Task 7: Select an HTML element and change one of its attributes (e.g., src of an img tag).
+    // <img id="myImage" src="https://images.pexels.com/photos/10928747/pexels-photo-10928747.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Old Image">
+    // <button id="changeImageButton">Change Image</button>
+    // document
+    //   .querySelector("#changeImageButton")
+    //   .addEventListener("click", function () {
+    //     document
+    //       .querySelector("#myImage")
+    //       .setAttribute(
+    //         "src",
+    //         "https://images.pexels.com/photos/18207346/pexels-photo-18207346/free-photo-of-view-of-a-mitsubishi-pajero-driving-on-a-dirt-road.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    //       );
+    //   });
+
+    // • Task 8: Add and remove a CSS class to/from an HTML element.
+    //   <div id="myElement">This is an element.</div>
+    // <button id="toggleClassButton">Toggle Class</button>
+    // document
+    //   .querySelector("#toggleClassButton")
+    //   .addEventListener("click", function () {
+    //     const element = document.querySelector("#myElement");
+    //     element.classList.toggle("highlight");
+    //   });
+
+    // Activity 5: Event Handling
+    // Task 9: Add a click event listener to a button that changes the text content of a paragraph.
+    // <div id="myParagraph">
+    //   Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, placeat?
+    //   Ipsa, qui repellat laboriosam non rem rerum tempora, corporis officiis
+    //   aliquam similique maxime perferendis id recusandae nemo aliquid! Quia,
+    //   sint.
+    // </div>
+    // <button id="changeParagraphContent">Change paragraph content</button>
+    // document
+    //   .querySelector("#changeParagraphContent")
+    //   .addEventListener("click", function () {
+    //     const myParagraphText = document.querySelector("#myParagraph");
+    //     myParagraphText.textContent = "The content has been changed!";
+    //   });
+
+    // • Task 10: Add a mouseover event listener to an element that changes its border color.
+    // <div
+    //   id="myElement"
+    //   style="width: 100px; height: 100px; border: 2px solid black;"
+    // >
+    //   Hover over me!
+    // </div>
+
+    // document
+    //   .querySelector("#myElement")
+    //   .addEventListener("mouseover", function () {
+    //     this.style.borderColor = "blue";
+    //   });
+    // document
+    //   .querySelector("#myElement")
+    //   .addEventListener("mouseout", function () {
+    //     this.style.borderColor = "red";
+    //   });
+
+    // potimize version of code
+    // const myElement = document.querySelector("#myElement");
+
+    // myElement.addEventListener("mouseover", function () {
+    //   this.style.borderColor = "blue";
+    // });
+
+    // myElement.addEventListener("mouseout", function () {
+    //   this.style.borderColor = "red";
+    // });
+
+    // Feature Request:
+    // 1. Text Content Manipulation Script: Write a script that selects an HTML element by its ID and changes its text content.
+    // 2. Element Creation Script: Create a script that demonstrates creating a new div element and appending it to the body.
+    // 3. Element Removal Script: Write a script that selects an HTML element and removes it from the DOM.
+    // 4. Attribute Modification Script: Create a script that changes the attributes of an HTML element.
+    // 5. Event Handling Script: Write a script that adds event listeners to HTML elements to change their content or style based on user interactions.
+    // Achievement:
+    // By the end of these activities, students will:
+    // Select and manipulate DOM elements using JavaScript.
+    // Create and append new elements to the DOM.
+    // • Remove elements from the DOM.
+    // • Modify attributes and classes of HTML elements.
+    // • Add and handle events to make web pages interactive.
+  </script>
+</html>
